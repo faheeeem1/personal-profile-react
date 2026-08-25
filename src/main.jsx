@@ -5,6 +5,18 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
+const redirect = new URLSearchParams(window.location.search).get(
+    "redirect"
+);
+
+if (redirect) {
+    window.history.replaceState(
+        null,
+        "",
+        `${import.meta.env.BASE_URL}${redirect.replace(/^\/+/, "")}`
+    );
+}
+
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter basename={import.meta.env.BASE_URL}>

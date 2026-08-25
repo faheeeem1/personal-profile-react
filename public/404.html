@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        const path = window.location.pathname;
+        const repo = "/personal-profile-react";
+
+        if (path.startsWith(repo)) {
+            const route = path.substring(repo.length);
+
+            window.location.replace(
+                repo + "/?redirect=" +
+                encodeURIComponent(route + window.location.search + window.location.hash)
+            );
+        } else {
+            window.location.replace(repo + "/");
+        }
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
