@@ -4,21 +4,21 @@ const activities = [
     {
         id: 1,
         title: "Academic Activity",
-        image: "/images/academic.jpg",
+        image: `${import.meta.env.BASE_URL}images/academic.jpg`,
         description:
             "Academic activities and programming projects."
     },
     {
         id: 2,
         title: "Technical Activity",
-        image: "/images/technical.jpg",
+        image: `${import.meta.env.BASE_URL}images/technical.jpg`,
         description:
             "Learning programming, web development and technical skills."
     },
     {
         id: 3,
         title: "Web Development",
-        image: "/images/web-development.jpg",
+        image: `${import.meta.env.BASE_URL}images/web-development.jpg`,
         description:
             "Practicing HTML, CSS, JavaScript and modern web development."
     }
